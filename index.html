@@ -8,13 +8,12 @@
 
 #login{position:fixed;inset:0;z-index:9;align-items:center;justify-content:center;padding:30px;background:radial-gradient(circle at 20% 20%,#14504f,transparent 45%),radial-gradient(circle at 85% 80%,#0f3b44,transparent 50%),#06161a}
 .lcard{display:flex;width:min(920px,100%);min-height:480px;background:#fff;border-radius:24px;padding:30px;box-shadow:0 30px 80px #0008}
-.lleft{flex:1;border-radius:30px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;background:radial-gradient(circle at 30% 30%,#1f6f6a 0,transparent 55%),radial-gradient(circle at 80% 90%,#2a8c88 0,transparent 40%),#0a1f24}
-.llogo{font-weight:800;letter-spacing:.5px}.ltxt h2{font-size:50px;line-height:1.15;margin:0 0 10px;letter-spacing:-.5px}.ltxt p{margin:0;font-size:50px;color:#cde4e2;max-width:300px}
+.lleft{flex:1;border-radius:20px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;background:radial-gradient(circle at 30% 30%,#1f6f6a 0,transparent 55%),radial-gradient(circle at 80% 90%,#2a8c88 0,transparent 40%),#0a1f24}
+.llogo{font-weight:800;letter-spacing:.5px}.ltxt h2{font-size:30px;line-height:1.15;margin:0 0 10px;letter-spacing:-.5px}.ltxt p{margin:0;font-size:13px;color:#cde4e2;max-width:300px}
 .lright{flex:1;display:flex;flex-direction:column;justify-content:center;padding:30px 50px;gap:14px}.lright h1{margin:0;font-size:24px;letter-spacing:-.3px}.pw{position:relative}.pw input{width:100%;padding-right:56px}.pw span{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:12px;color:#0b4a52;cursor:pointer;font-weight:700}.lbtn{background:#0b4a52;padding:12px}
 @media(max-width:700px){.lleft{display:none}.lright{padding:24px 18px}}
 .hide{display:none!important}#printArea{display:none}.ph{display:flex;justify-content:space-between;border-bottom:2px solid #000;margin-bottom:14px;padding-bottom:10px}.ph h1{margin:0 0 4px;font-size:20px}.pt{border:1px solid #999;margin:10px 0}.pt th,.pt td{border:1px solid #999;padding:6px 8px;color:#000;background:#fff;font-size:12px;white-space:normal}.itr{display:grid;grid-template-columns:3fr 1fr 1.3fr auto;gap:6px;margin-bottom:6px}
 @media print{body>:not(#printArea){display:none!important}#printArea{display:block;padding:20px;color:#000;font:13px sans-serif}}
-
 </style></head><body>
 <div id="login" style="display:flex"><div class="lcard"><div class="lleft"><div class="llogo">Welcome to NRC Workspace</div><div class="ltxt"><h2>SERVICE ORDERS,<br>ALL IN ONE PLACE.</h2><p>Sign in to create SOs, track payments and follow up with customers.</p></div></div><form id="lf" class="lright"><h1>WELCOME BACK</h1><p class="sub" style="margin:0">Welcome back! Please enter your details.</p><div class="field"><label>Email</label><input name="e" type="email" placeholder="Enter your email" required></div><div class="field"><label>Password</label><div class="pw"><input name="p" type="password" placeholder="Enter your password" required><span onclick="const i=this.previousElementSibling;i.type=i.type==='password'?'text':'password';this.textContent=i.type==='password'?'Show':'Hide'">Show</span></div></div><button class="btn lbtn">Sign in</button><div id="lerr" class="sub" style="color:#bb4545"></div></form></div></div>
 <div class="app hide" id="app"><aside class="side"><div class="brand"><div class="logo">N</div><div><b>NRC Workspace</b><small>SERVICE ORDERS</small></div></div><nav class="nav">
@@ -23,8 +22,7 @@
 <div class="modalbg" id="modal"><div class="modal"><div class="modalhead"><h2 id="mt"></h2><button class="x" onclick="cm()">✕</button></div><div id="mc"></div></div></div>
 <div id="printArea"></div>
 <script>
-
-  // ===== EDIT THESE =====
+// ===== EDIT THESE =====
 const SB_URL='https://cskbcnrolxumwejfrczc.supabase.co',SB_KEY='sb_publishable_M3QE1rbcF2vp5yhX7_GqGg_EjCza92o';
 const CO={name:'NRC electric Fence Sdn Bhd',addr:'Lot 2578, Block 10, KCLD 1st Floor, 3rd Miles, Jalan Rock, Central Park Commercial Centre, 93250 Kuching, Sarawak',tel:'Tel: 082-236886'};
 // ======================
